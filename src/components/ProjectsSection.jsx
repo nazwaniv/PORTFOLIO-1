@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
@@ -9,7 +9,6 @@ const projects = [
     image: "projects/project1.png",
     tags: ["React", "TailwindCSS", "Supabase"],
     category: "frontend",
-    demoUrl: "https://vanshnazwani.github.io/SaaS-Landing-Page/",
     githubUrl: "https://github.com/VanshNazwani/SaaS-Landing-Page",
   },
   {
@@ -20,7 +19,6 @@ const projects = [
     image: "projects/project2.png",
     tags: ["React", "Node.js", "Stripe"],
     category: "fullstack",
-    demoUrl: "https://vanshnazwani.github.io/E-commerce-Platform/",
     githubUrl: "https://github.com/VanshNazwani/E-commerce-Platform",
   },
   {
@@ -31,7 +29,6 @@ const projects = [
     image: "projects/project3.png",
     tags: ["Node.js", "AI", "NLP"],
     category: "AI & ML",
-    demoUrl: "https://vanshnazwani.github.io/Chatbot-Web-App/",
     githubUrl: "https://github.com/VanshNazwani/Chatbot-Web-App",
   },
   {
@@ -42,7 +39,6 @@ const projects = [
     image: "projects/project4.png",
     tags: ["Python", "Scikit-learn", "Pandas", "NumPy", "NLP"],
     category: "AI & ML",
-    demoUrl: "https://vanshnazwani.github.io/AI-for-Mental-Health-Prediction/",
     githubUrl: "https://github.com/VanshNazwani/AI-for-Mental-Health-Prediction",
   },
   {
@@ -53,7 +49,6 @@ const projects = [
     image: "projects/project5.png",
     tags: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express.js", "MongoDB"],
     category: "fullstack",
-    demoUrl: "https://vanshnazwani.github.io/TaskFlow-Pro/",
     githubUrl: "https://github.com/VanshNazwani/TaskFlow-Pro",
   },
 ];
@@ -129,23 +124,14 @@ export const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
-                  </div>
+                <div className="flex items-center">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  >
+                    <Github size={20} />
+                  </a>
                 </div>
               </div>
             </div>
